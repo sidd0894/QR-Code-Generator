@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [inputText, setIntputText] = useState('')
-  const [inputbBgColor, setinputBgColor] = useState('ffffff')
+  const [inputbBgColor, setInputBgColor] = useState('ffffff')
   const [data, setData] = useState('')
   const [qrSrc, setQrSrc] = useState('')
   const [charWarning, setCharWarning] = useState(false)
@@ -46,7 +46,7 @@ function App() {
             value={`#${inputbBgColor}`}
             onChange={e => {
               let code = (e.target.value).split('#')[(e.target.value).split('#').length - 1].toString()
-              setinputBgColor(code)
+              setInputBgColor(code)
             }}
           />
         </div>
@@ -54,7 +54,7 @@ function App() {
         <div className='my-2 mx-2 flex items-center justify-center'>
           <div className='bg-violet-600 hover:bg-violet-700 py-1 px-2 cursor-pointer rounded'
             onClick={() => {
-              setinputBgColor('ffffff')
+              setInputBgColor('ffffff')
               setColor('ffffff')
             }}
           >Reset Color</div>
